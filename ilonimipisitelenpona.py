@@ -99,7 +99,7 @@ class Keyboard(tk.Frame):
                 '.':'.',',':',',':':':','"':'"',
                 'INS':'\uE007\uE043','HOME':'\uE029\uE047','PAGEUP':'\uE02A\uE05A',
                 'DEL':'o\uE077','END':'\uE029\uE050','PAGEDOWN':'\uE02A\uE006',
-                'UP':'\u2191','DOWN':'\u2193','LEFT':'\u2190','RIGHT':'\u2192'}[code]
+                'UP':'\u2191','DOWN':'\u2193','LEFT':'\u2190','RIGHT':'\u2192'}[code]
     def getWords(self):
         toret=self.words
         self.words=[]
