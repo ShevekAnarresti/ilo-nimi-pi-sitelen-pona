@@ -208,8 +208,14 @@ class Toki(tk.Tk):
         try:
             pdf=fpdf.FPDF()
             pdf.add_page()
-            pdf.add_font('sitelen luka tu tu','',
+            try:
+                pdf.add_font('sitelen luka tu tu','',
                          (r'C:\Windows\Fonts\sitelen_luka_tu_tu.ttf' if os.name=='nt'
+                          else '/usr/share/fonts/sitelen_luka_tu_tu.ttf'),
+                         uni=True)
+            except RuntimeError:
+                pdf.add_font('sitelen luka tu tu','',
+                         (r'C:\Windows\Fonts\sitelen_luka_tu_tu.ttf_' if os.name=='nt'
                           else '/usr/share/fonts/sitelen_luka_tu_tu_.ttf'),
                          uni=True)
             pdf.set_font('sitelen luka tu tu',size=20)
